@@ -12,5 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return "Developers Best Friend";
 });
+
+Route::resource('ipsum', 'IpsumController');
