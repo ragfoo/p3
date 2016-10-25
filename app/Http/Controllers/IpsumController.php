@@ -11,10 +11,21 @@ class IpsumController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
-        return view('ipsum.index');
+        $paragraphs = $request->input('paragraphs');
+        $ipsumText = [];
+        if ($paragraphs) {
+          for ($i = 1; $i <= $paragraphs; $i++){
+            array_push($ipsumText, "Hello");
+          }
+        }
+        else{
+          array_push($ipsumText, "FuckAll");
+        }
+
+        return view('ipsum.index')->with('ipsumText',$ipsumText);
     }
 
     /**

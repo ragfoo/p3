@@ -8,18 +8,27 @@
 <body>
 
     <header>
-        <img
-        src='http://making-the-internet.s3.amazonaws.com/laravel-foobooks-logo@2x.png'
-        style='width:300px'
-        alt='Foobooks Logo'>
+        <h1> Lorem Ipsum Generator </h1>
     </header>
 
     <section>
-        <h1>Show book: {{ "Hello Ipsum" }}</h1>
+        <p>How many paragraphs do you want?</p>
+
+        <form method='POST' action='/ipsum'>
+          {{ csrf_field() }}
+          <label for="paragraphs">Paragraphs</label>
+          <input maxlength="2" name="paragraphs" type="text" value="5" id="paragraphs"> (Max: 99)
+          <br><br>
+          <input type='submit' value='Generate!'>
+        </form>
+
     </section>
 
     <footer>
-        &copy; {{ date('Y') }}
+      @foreach ($ipsumText as $paragraph)
+        <p>{{ $paragraph }}</p>
+      @endforeach
+
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
