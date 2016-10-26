@@ -1,0 +1,72 @@
+/*
+ * Start Bootstrap - Full Width Pics (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+@font-face {
+	font-family: 'Simpsonfont';
+	src: url('/fonts/OriginallycompiledbyJonBernhardt..eot');
+	src: url('/fonts/OriginallycompiledbyJonBernhardt..eot?#iefix') format('embedded-opentype'),
+		url('/fonts/OriginallycompiledbyJonBernhardt..woff2') format('woff2'),
+		url('/fonts/OriginallycompiledbyJonBernhardt..woff') format('woff'),
+		url('/fonts/OriginallycompiledbyJonBernhardt..ttf') format('truetype'),
+		url('/fonts/OriginallycompiledbyJonBernhardt..svg#OriginallycompiledbyJonBernhardt.') format('svg');
+	font-weight: 100;
+	font-style: normal;
+}
+
+
+
+.image-bg-fluid-height,
+.image-bg-fixed-height {
+    text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.image-bg-fixed-height {
+	background: url("/img/homer.jpg") no-repeat center center scroll;
+  background-attachment: fixed;
+  height: 1200px;
+  overflow:scroll;
+}
+
+.img-center {
+	margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Simpsonfont';
+}
+.section-heading {
+    margin: 50px 0;
+    font-family: 'Simpsonfont';
+    font-weight: 100;
+    font-style: normal;
+    font-size: 4em;
+}
+
+.section-lead {
+    margin: 30px 0;
+
+}
+
+.section-paragraph {
+    margin: 30px 0;
+}
+
+
+@media(max-width:768px) {
+    section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .section-heading {
+        font-family: 'Simpsonfont';
+        font-size: 2em;
+    }
+}

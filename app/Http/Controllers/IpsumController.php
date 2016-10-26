@@ -14,15 +14,18 @@ class IpsumController extends Controller
     public function index(Request $request)
     {
         //
+        $lines = file('/Applications/MAMP/htdocs/p3/resources/HomerSimpson.txt', FILE_IGNORE_NEW_LINES);
         $paragraphs = $request->input('paragraphs');
         $ipsumText = [];
+
         if ($paragraphs) {
           for ($i = 1; $i <= $paragraphs; $i++){
-            array_push($ipsumText, "Hello");
+            $newParagraph = "";
+            for ($j = 1; $j <= 5; $j++){
+              $newParagraph = $newParagraph." ".$lines[rand(0,count($lines)-1)];
+            }
+            array_push($ipsumText, $newParagraph);
           }
-        }
-        else{
-          array_push($ipsumText, "FuckAll");
         }
 
         return view('ipsum.index')->with('ipsumText',$ipsumText);
