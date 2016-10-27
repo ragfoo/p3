@@ -15,14 +15,25 @@ class UserController extends Controller
     {
         //
         $numberOfUsers = $request->input('users');
+        $showLocation = $request->input('location');
+        $showBirthdate = $request->input('birthdate');
+
         $cities = file('/Applications/MAMP/htdocs/p3/resources/us-cities.txt', FILE_IGNORE_NEW_LINES);
         $userList = [];
         $generator = \Nubs\RandomNameGenerator\All::create();
         if ($numberOfUsers){
           for ($i = 1; $i <= $numberOfUsers; $i++){
             $userInfo['name'] = $generator->getName();
-            $userInfo['birthdate'] = rand(1,12)."/".rand(1,28)."/".rand(1900,2000);
-            $userInfo['location'] = $cities[rand(0,count($cities)-1)];
+            if ($showBirthdate){
+              $userInfo['birthdate'] = rand(1,12)."/".rand(1,28)."/".rand(1900,2000);
+            }else{
+              $userInfo['birthdate'] = "";
+            }
+            if ($showLocation){
+              $userInfo['location'] = $cities[rand(0,count($cities)-1)];
+            }else{
+              $userInfo['location'] = "";
+            }
             array_push($userList, $userInfo);
           }
         }

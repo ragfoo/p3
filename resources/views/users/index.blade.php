@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Corporate 1</title>
+    <title>Random User Generator</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -36,9 +36,9 @@
 
     		Include...
     		<br>
-    		<input name="birthdate" type="checkbox">		<label for="birthdate">Birthdate</label>		<br>
+    		<input name="birthdate" type="checkbox" checked>		<label for="birthdate">Birthdate</label>		<br>
 
-    		<input name="profile" type="checkbox">		<label for="profile">Profile</label>		<br>
+    		<input name="location" type="checkbox" checked>		<label for="location">Location</label>		<br>
 
     		<input type="submit" value="Generate!">
       </form>
