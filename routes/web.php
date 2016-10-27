@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::resource('ipsum', 'IpsumController');
 
 Route::post('/ipsum', 'IpsumController@index')->name('ipsum.index');
+
+Route::resource('users', 'UserController');
+
+Route::post('/users', 'UserController@index')->name('users.index');
