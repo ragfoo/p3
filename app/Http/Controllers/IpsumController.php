@@ -19,6 +19,9 @@ class IpsumController extends Controller
         $ipsumText = [];
 
         if ($paragraphs) {
+          $this->validate($request, [
+          'paragraphs' => 'required|min:1|max:99|numeric',
+          ]);
           for ($i = 1; $i <= $paragraphs; $i++){
             $newParagraph = "";
             for ($j = 1; $j <= 5; $j++){

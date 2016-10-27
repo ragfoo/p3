@@ -10,8 +10,10 @@
 </head>
 
 <body>
+  <p>Generate up to 99 Random Users including Birthdates and Locations! </p>
   <a href="users">Random User Generator!</a>
   <p>
+  <p>A Lorem Ipsum Generator that provides placeholder paragraphs spoken by Homer J Simpson! </p>
   <a href="ipsum">Homer J Ipsum!</a>
 </body>
 

@@ -14,6 +14,7 @@ class UserController extends Controller
     public function index(Request $request)
     {
         //
+
         $numberOfUsers = $request->input('users');
         $showLocation = $request->input('location');
         $showBirthdate = $request->input('birthdate');
@@ -22,6 +23,9 @@ class UserController extends Controller
         $userList = [];
         $generator = \Nubs\RandomNameGenerator\All::create();
         if ($numberOfUsers){
+          $this->validate($request, [
+          'users' => 'required|min:1|max:99|numeric',
+          ]);
           for ($i = 1; $i <= $numberOfUsers; $i++){
             $userInfo['name'] = $generator->getName();
             if ($showBirthdate){
