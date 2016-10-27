@@ -25,29 +25,26 @@
     <!-- Full Width Image Header with Logo -->
     <!-- Image backgrounds are set within the full-width-pics.css file. -->
     <header class="image-bg-fixed-height">
-        <h1 class="section-heading">Homer J Ipsum</h1>
-        <!-- <img class="img-responsive img-center" src="/img/homer.jpg" alt="">-->
-        <!-- Content Section -->
-        <section>
+        <section class="ipsum-section">
             <div class="container">
+                <h1 class="section-heading">Homer J Ipsum</h1>
                 <div class="row">
-                    <div class="col-lg-12">
 
-                        <p>How many paragraphs do you want?</p>
+                        <p class="basic-text">How many paragraphs do you want?</p>
 
                         <form method='POST' action='/ipsum'>
                           {{ csrf_field() }}
-                          <label for="paragraphs">Paragraphs</label>
-                          <input maxlength="2" name="paragraphs" type="text" value="5" id="paragraphs"> (Max: 99)
+                          <label for="paragraphs" class="basic-text">Paragraphs</label>
+                          <input class="basic-text" maxlength="2" size=2 name="paragraphs" type="text" value="5" id="paragraphs"> <p class="basic-text">(Max: 99)</p>
                           <br><br>
-                          <input type='submit' value='Generate!'>
+                          <input class="button1" type='submit' value='Generate!'>
                         </form>
                     </div>
                     @foreach ($ipsumText as $paragraph)
-                      <p>{{ $paragraph }}</p>
+                      <p class="ipsum-text">{{ $paragraph }}</p>
                     @endforeach
                 </div>
-            </div>
+
         </section>
     </header>
 
