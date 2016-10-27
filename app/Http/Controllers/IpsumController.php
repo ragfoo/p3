@@ -14,7 +14,7 @@ class IpsumController extends Controller
     public function index(Request $request)
     {
         //
-        $lines = file('/resources/HomerSimpson.txt', FILE_IGNORE_NEW_LINES);
+        $lines = file('../resources/HomerSimpson.txt', FILE_IGNORE_NEW_LINES);
         $paragraphs = $request->input('paragraphs');
         $ipsumText = [];
 

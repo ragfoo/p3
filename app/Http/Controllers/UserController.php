@@ -19,7 +19,7 @@ class UserController extends Controller
         $showLocation = $request->input('location');
         $showBirthdate = $request->input('birthdate');
 
-        $cities = file('/resources/us-cities.txt', FILE_IGNORE_NEW_LINES);
+        $cities = file('../resources/us-cities.txt', FILE_IGNORE_NEW_LINES);
         $userList = [];
         $generator = \Nubs\RandomNameGenerator\All::create();
         if ($numberOfUsers){
